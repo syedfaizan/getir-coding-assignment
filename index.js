@@ -10,6 +10,10 @@ app.use(express.json())
 const { validateCount, validateDate } = require('./utils/validators');
 const { getRecords } = require('./controllers/recordCtrl');
 
+app.get('/', (req, res) => {
+  return res.send("working! send POST request to /api/records")
+});
+
 app.post(
   '/api/records',
   body('maxCount').custom(validateCount), // checks for body
