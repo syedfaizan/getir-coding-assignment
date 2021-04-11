@@ -13,11 +13,17 @@ $ npm start
 
 App should now be running on [localhost:5000](http://localhost:5000/).
 
+## Run tests
+
+```sh
+$ npm run test
+```
+
 ## API documentation
 
 #### Routes:
 
-`<server url>/api/records` - POST Request
+`<server-url>/api/records` - POST Request
 
 ##### Request Format:
 
@@ -45,9 +51,9 @@ App should now be running on [localhost:5000](http://localhost:5000/).
 
 ```
 {
-    "code": ErrorCode
-    "msg": Message,
-    "records": Array of Records
+    "code": Number //ErrorCode
+    "msg": String //Message,
+    "records": [Object] //Array of Records
 }
 
 ```
