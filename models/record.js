@@ -1,12 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const recordsSchema = new mongoose.Schema({
-    "key": String,
-    "createdAt": Date,
-    "counts": [
-        Number
-    ],
-    "value": String
-})
+  key: String,
+  createdAt: Date,
+  counts: [Number],
+  value: String,
+});
 
-module.exports = mongoose.model('records', recordsSchema);
+module.exports = mongoose.model("records", recordsSchema);
