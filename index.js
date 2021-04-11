@@ -38,7 +38,7 @@ app.post(
       }
       return res.status(400).json({
         code: ERRORS.Mixed,
-        msg: "Mixed error type",
+        msg: "MixedErrorType",
         errors: errors.array(),
       });
     }
