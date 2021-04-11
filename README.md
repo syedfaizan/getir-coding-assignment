@@ -25,8 +25,8 @@ App should now be running on [localhost:5000](http://localhost:5000/).
 {
     "startDate": Date String, // YYYY-MM-DD format
     "endDate": Date String, // YYYY-MM-DD format
-    "maxCount": Number,
-    "minCount": Number
+    "maxCount": Number, // Positive integer
+    "minCount": Number // Positive integer
 }
 ```
 

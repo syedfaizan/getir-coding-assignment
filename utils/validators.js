@@ -6,7 +6,7 @@ const ERRORS = {
 };
 
 const ERROR_MESSAGES = {
-  REFERECE_ERROR: "ReferenceError: No value passed",
+  REFERENCE_ERROR: "ReferenceError: No value passed",
   DATE_FORMAT_ERROR:
     "FormatError: Date is not in correct format (correct format: YYYY-MM-DD)",
   TYPE_ERROR: "TypeError: Expecting integer input",
@@ -28,7 +28,7 @@ const getType = (elem) => {
 
 const validateDate = (value) => {
   if (getType(value) === "Null" || getType(value) === "Undefined") {
-    throw new Error(ERROR_MESSAGES.REFERECE_ERROR);
+    throw new Error(ERROR_MESSAGES.REFERENCE_ERROR);
   }
 
   if (!isDate(value)) {
@@ -39,7 +39,7 @@ const validateDate = (value) => {
 
 const validateCount = (value) => {
   if (getType(value) === "Null" || getType(value) === "Undefined") {
-    throw new Error(ERROR_MESSAGES.REFERECE_ERROR);
+    throw new Error(ERROR_MESSAGES.REFERENCE_ERROR);
   }
 
   if (getType(value) !== "Number") {
