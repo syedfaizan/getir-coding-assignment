@@ -1,4 +1,9 @@
-const { isDate, validateDate, validateCount } = require("./validators");
+const {
+  isDate,
+  validateDate,
+  validateCount,
+  getType,
+} = require("./validators");
 
 describe("test suite for 'isDate' validator", () => {
   it("isDate should return false for null", () => {
@@ -47,5 +52,23 @@ describe("test suite for 'validateCount' validator", () => {
 
   it("validateCount should return 'true' for positive integer value", () => {
     expect(validateCount(300)).toBeTruthy();
+  });
+});
+
+describe("Test the getType method", () => {
+  it("Should return 'Null' for null", () => {
+    expect(getType(null)).toBe("Null");
+  });
+
+  it("Should return 'Object' for {}", () => {
+    expect(getType({})).toBe("Object");
+  });
+
+  it("Should return 'Array' for []", () => {
+    expect(getType([])).toBe("Array");
+  });
+
+  it("Should return 'Undefined' for undefined", () => {
+    expect(getType(undefined)).toBe("Undefined");
   });
 });
